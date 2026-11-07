@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard · I Store</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../js/app.js" defer></script>
+</head>
+<body class="loading" data-page="dashboard">
+    <header class="nav">
+        <div class="nav-inner">
+            <a class="brand" href="dashboard.html">I Store</a>
+            <nav class="nav-links">
+                <a href="dashboard.html" class="active">Home</a>
+                <a href="iphone.html">iPhone</a>
+                <a href="macbook.html">MacBook</a>
+                <a href="tablet.html">Tablets</a>
+                <a href="earbuds.html">Earbuds</a>
+                <a href="charger.html">Chargers</a>
+                <a href="admin.html" class="admin-link" hidden>Admin</a>
+            </nav>
+            <div class="nav-user">
+                <a href="profile.html" id="nav-name">Account</a>
+                <a href="../../includes/logout.php" class="logout">Log out</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="messages"></div>
+
+        <section class="welcome">
+            <p class="eyebrow">Dashboard</p>
+            <h1>Welcome back, <span id="welcome-name"></span>.</h1>
+            <p>Explore the latest Apple products in our store.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat"><span class="stat-num" id="stat-total">0</span><span class="stat-label">Products</span></div>
+            <div class="stat"><span class="stat-num" id="stat-instock">0</span><span class="stat-label">In stock</span></div>
+            <div class="stat"><span class="stat-num" id="stat-cats">0</span><span class="stat-label">Categories</span></div>
+        </section>
+
+        <section class="tiles">
+            <a class="tile" href="iphone.html">
+                <h3>iPhone</h3>
+                <p>Pro cameras. Titanium. Fast.</p>
+                <span class="tile-count" data-count="iphone">0 items &rsaquo;</span>
+            </a>
+            <a class="tile" href="macbook.html">
+                <h3>MacBook</h3>
+                <p>Powerful laptops for everyone.</p>
+                <span class="tile-count" data-count="macbook">0 items &rsaquo;</span>
+            </a>
+            <a class="tile" href="tablet.html">
+                <h3>Tablets</h3>
+                <p>iPad for work, play and art.</p>
+                <span class="tile-count" data-count="tablets">0 items &rsaquo;</span>
+            </a>
+            <a class="tile" href="earbuds.html">
+                <h3>Earbuds</h3>
+                <p>AirPods with rich sound.</p>
+                <span class="tile-count" data-count="earbuds">0 items &rsaquo;</span>
+            </a>
+            <a class="tile" href="charger.html">
+                <h3>Chargers</h3>
+                <p>Adapters, MagSafe and cables.</p>
+                <span class="tile-count" data-count="chargers">0 items &rsaquo;</span>
+            </a>
+        </section>
+
+        <section class="catalog">
+            <h2 class="section-title">Full catalog</h2>
+            <form class="search" id="search-form">
+                <input type="search" name="q" placeholder="Search all products">
+                <button type="submit" class="btn">Search</button>
+            </form>
+            <div id="products"></div>
+        </section>
+    </main>
+    <div id="site-footer"></div>
+</body>
+</html>

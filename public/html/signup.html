@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up · I Store</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <script src="../js/app.js" defer></script>
+</head>
+<body data-page="signup">
+    <main class="auth-wrap">
+        <div class="auth-card">
+            <div class="auth-logo">I Store</div>
+            <h1>Create account</h1>
+            <p class="auth-sub">It only takes a minute.</p>
+            <div id="messages"></div>
+            <form action="../../includes/signup.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" maxlength="30" placeholder="Your name" required autofocus>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" minlength="8"
+                       pattern="(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}"
+                       title="At least 8 characters, with a number and a special character"
+                       placeholder="Create a password" required>
+                <small class="hint">At least 8 characters, with a number and a special character.</small>
+                <label class="check">
+                    <input type="checkbox" name="confirm" value="1" required>
+                    <span>I confirm the information above is correct.</span>
+                </label>
+                <button type="submit" class="btn btn-block">Sign up</button>
+            </form>
+            <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+    </main>
+</body>
+</html>

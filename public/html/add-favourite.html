@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Favourite · I Store</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/favourite.css" />
+    <script src="../js/app.js" defer></script>
+  </head>
+  <body data-page="add-favourite">
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="dashboard.html">I Store</a>
+        <nav class="nav-links">
+          <a href="dashboard.html">Home</a>
+          <a href="iphone.html">iPhone</a>
+          <a href="macbook.html">MacBook</a>
+          <a href="tablet.html">Tablets</a>
+          <a href="earbuds.html">Earbuds</a>
+          <a href="charger.html">Chargers</a>
+          <a href="favourites.html">Favourites</a>
+        </nav>
+        <div class="nav-user">
+          <a href="profile.html" id="nav-name">Account</a>
+          <a href="../../includes/logout.php" class="logout">Log out</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="favourite-page">
+      <div class="favourite-heading">
+        <p class="eyebrow">YOUR COLLECTION</p>
+        <h1>Add to Favourite</h1>
+        <p>Save this product with your personal details.</p>
+      </div>
+      <div id="favourite-message"></div>
+      <section class="favourite-product" id="favourite-product">
+        <p class="empty">Loading product...</p>
+      </section>
+      <form
+        id="favourite-form"
+        action="../../includes/favourite/favourite_save.php"
+        method="POST"
+        hidden
+      >
+        <input type="hidden" name="product_id" id="product-id" />
+        <h2>Your Favourite Details</h2>
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="3"
+          maxlength="1000"
+          placeholder="Write something about this product..."
+          required
+        ></textarea>
+        <label for="reason">Why do you like this product?</label>
+        <input
+          type="text"
+          id="reason"
+          name="reason"
+          maxlength="255"
+          placeholder="e.g. Excellent camera and performance"
+          required
+        />
+        <label for="priority">Priority</label>
+        <select id="priority" name="priority" required>
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+        </select>
+        <label for="notes">Personal Notes</label>
+        <textarea
+          id="notes"
+          name="notes"
+          rows="3"
+          maxlength="1000"
+          placeholder="Any additional notes (optional)"
+        ></textarea>
+        <button type="submit" class="btn btn-block" id="save-favourite">
+          Save to Favourite
+        </button>
+        <a href="iphone.html" class="cancel-link">Continue Shopping</a>
+      </form>
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>

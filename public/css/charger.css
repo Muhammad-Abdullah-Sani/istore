@@ -1,0 +1,707 @@
+
+body[data-category="chargers"] {
+  --ch-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  background: #0d0c08 !important;
+  color: #f5f5f7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body[data-category="chargers"] ::selection {
+  background: #ffd60a;
+  color: #111;
+}
+
+body[data-category="chargers"] a:focus-visible,
+body[data-category="chargers"] button:focus-visible,
+body[data-category="chargers"] input:focus-visible {
+  outline: 2px solid #ffd60a;
+  outline-offset: 3px;
+}
+
+body[data-category="chargers"] .nav {
+  background: rgba(13, 12, 8, 0.8) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+body[data-category="chargers"] .brand {
+  color: #fff !important;
+  transition: transform 0.25s ease, text-shadow 0.25s ease;
+}
+
+body[data-category="chargers"] .brand:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 18px rgba(255, 214, 10, 0.8);
+}
+
+body[data-category="chargers"] .nav-links a {
+  position: relative;
+  color: #a1a1a6 !important;
+  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+body[data-category="chargers"] .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ffd60a, #ff9f0a);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+body[data-category="chargers"] .nav-links a:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+body[data-category="chargers"] .nav-links a:hover::after {
+  width: 55%;
+}
+
+body[data-category="chargers"] .nav-links a.active {
+  background: rgba(255, 214, 10, 0.14) !important;
+  color: #fff !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 214, 10, 0.6),
+    0 0 20px rgba(255, 214, 10, 0.28);
+}
+
+body[data-category="chargers"] .nav-links a.active::after {
+  width: 0;
+}
+
+body[data-category="chargers"] .nav-links a.admin-link {
+  color: #e9c9ff !important;
+  box-shadow: inset 0 0 0 1px rgba(191, 90, 242, 0.45);
+}
+
+body[data-category="chargers"] .nav-user a#nav-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f5f5f7 !important;
+}
+
+body[data-category="chargers"] .nav-user a#nav-name::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd60a, #ff9f0a);
+  box-shadow: 0 0 12px rgba(255, 214, 10, 0.7);
+}
+
+body[data-category="chargers"] .nav-user a#nav-name:hover {
+  color: #ffe066 !important;
+}
+
+body[data-category="chargers"] .nav-user .logout {
+  padding: 6px 16px;
+  border: 1px solid rgba(255, 107, 107, 0.5);
+  border-radius: 999px;
+  color: #ff7b72 !important;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+body[data-category="chargers"] .nav-user .logout:hover {
+  background: #ff453a;
+  color: #fff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(255, 69, 58, 0.4);
+}
+
+body[data-category="chargers"] .hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  padding: 90px 24px 80px;
+  color: #f5f5f7;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #0d0c08 !important;
+  background-image:
+    radial-gradient(55% 70% at 10% 0%, rgba(255, 214, 10, 0.3), transparent 62%),
+    radial-gradient(45% 70% at 92% 8%, rgba(255, 159, 10, 0.26), transparent 62%),
+    radial-gradient(60% 60% at 50% 125%, rgba(255, 255, 255, 0.08), transparent 60%),
+    linear-gradient(180deg, #0d0c08, #171509) !important;
+}
+
+body[data-category="chargers"] .hero > * {
+  position: relative;
+  z-index: 2;
+  animation: ch-rise 0.8s var(--ch-ease) backwards;
+}
+
+body[data-category="chargers"] .hero h1 {
+  margin: 0 0 16px;
+  color: #ffffff !important;
+  font-size: clamp(46px, 8vw, 86px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  text-shadow: 0 0 40px rgba(255, 214, 10, 0.5);
+}
+
+body[data-category="chargers"] .hero h1::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 5px;
+  margin: 16px auto 0;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ffffff, #ffd60a, #ff9f0a);
+}
+
+body[data-category="chargers"] .hero p {
+  max-width: 540px;
+  margin: 0 auto 28px;
+  color: #b8b6aa !important;
+  font-size: clamp(16px, 2.2vw, 20px);
+  animation-delay: 0.12s;
+}
+
+body[data-category="chargers"] .hero-actions {
+  max-width: 560px;
+  gap: 14px;
+  animation-delay: 0.24s;
+}
+
+body[data-category="chargers"] .hero::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 120px);
+  right: 12%;
+  box-sizing: border-box;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-image:
+    radial-gradient(circle, #ffd60a 0 11px, transparent 12px),
+    radial-gradient(circle, transparent 0 56px, rgba(255, 214, 10, 0.95) 57px 61px, transparent 62px),
+    radial-gradient(circle, transparent 0 84px, rgba(0, 0, 0, 0.12) 85px 87px, transparent 88px),
+    radial-gradient(circle at 34% 26%, #ffffff, #d9d9df 70%, #b9b9c2);
+  box-shadow:
+    inset 0 -12px 24px rgba(0, 0, 0, 0.12),
+    0 40px 80px rgba(0, 0, 0, 0.65),
+    0 0 110px rgba(255, 214, 10, 0.4);
+  animation: ch-float-a 6s ease-in-out infinite, ch-pulse 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+
+body[data-category="chargers"] .hero::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: calc(50% - 175px);
+  right: calc(12% - 58px);
+  box-sizing: border-box;
+  width: 120px;
+  height: 200px;
+  background-image: linear-gradient(160deg, #fff3a0 0%, #ffd60a 45%, #ff9f0a 100%);
+  clip-path: polygon(48% 0%, 14% 58%, 44% 58%, 30% 100%, 86% 38%, 56% 38%, 80% 0%);
+  animation: ch-float-b 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+body[data-category="chargers"] .btn {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.25s ease, background 0.2s ease,
+    color 0.2s ease, border-color 0.2s ease;
+}
+
+body[data-category="chargers"] .btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -70%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+body[data-category="chargers"] .btn:hover:not(:disabled)::before {
+  left: 130%;
+}
+
+body[data-category="chargers"] .btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+body[data-category="chargers"] .hero .btn,
+body[data-category="chargers"] .cards .btn.buy {
+  background: rgba(255, 214, 10, 0.14) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 214, 10, 0.65) !important;
+  box-shadow: 0 0 18px rgba(255, 214, 10, 0.22);
+}
+
+body[data-category="chargers"] .hero .btn:hover:not(:disabled),
+body[data-category="chargers"] .cards .btn.buy:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ffb800, #ffd60a) !important;
+  border-color: #ffd60a !important;
+  color: #14120a !important;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(255, 184, 0, 0.5);
+}
+
+body[data-category="chargers"] .hero .btn {
+  padding: 12px 28px;
+  font-size: 15px;
+}
+
+body[data-category="chargers"] .hero .search {
+  flex-wrap: nowrap;
+  gap: 6px;
+  margin: 0;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 999px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+body[data-category="chargers"] .hero .search:hover {
+  background: rgba(255, 255, 255, 0.11) !important;
+}
+
+body[data-category="chargers"] .hero .search:focus-within {
+  border-color: #ffd60a !important;
+  box-shadow: 0 0 0 4px rgba(255, 214, 10, 0.22), 0 0 36px rgba(255, 214, 10, 0.28);
+}
+
+body[data-category="chargers"] .hero .search input[type="search"] {
+  flex: 0 0 260px;
+  width: 260px;
+  min-width: 0;
+  padding: 10px 16px;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 999px;
+  color: #fff !important;
+  box-shadow: none !important;
+  outline: none;
+}
+
+body[data-category="chargers"] .hero .search input[type="search"]::placeholder {
+  color: #8e8e93;
+}
+
+body[data-category="chargers"] input[type="search"]::-webkit-search-cancel-button {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+
+@media (min-width: 1100px) {
+  body[data-category="chargers"] .hero {
+    align-items: flex-start;
+    padding-left: max(24px, calc((100% - 1100px) / 2 + 24px));
+    text-align: left;
+  }
+
+  body[data-category="chargers"] .hero h1::after {
+    margin-left: 0;
+  }
+
+  body[data-category="chargers"] .hero p {
+    margin-left: 0;
+  }
+
+  body[data-category="chargers"] .hero-actions {
+    justify-content: flex-start;
+  }
+}
+
+
+body[data-category="chargers"] .product-grid {
+  padding-top: 64px;
+  counter-reset: chser;
+}
+
+body[data-category="chargers"] .series-group {
+  margin-bottom: 72px;
+  counter-increment: chser;
+}
+
+body[data-category="chargers"] .series-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  color: #f5f5f7 !important;
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+body[data-category="chargers"] .series-title::before {
+  content: counter(chser, decimal-leading-zero);
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 214, 10, 0.55);
+  border-radius: 999px;
+  background: rgba(255, 214, 10, 0.13);
+  color: #ffd60a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+body[data-category="chargers"] .series-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.22), transparent);
+}
+
+body[data-category="chargers"] .cards {
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 26px;
+}
+
+body[data-category="chargers"] .cards .card {
+  background: #17150d !important;
+  color: #f5f5f7 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 26px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  transition: transform 0.35s ease, box-shadow 0.35s ease,
+    border-color 0.35s ease, opacity 0.35s ease;
+  animation: ch-rise 0.6s var(--ch-ease) backwards;
+}
+
+body[data-category="chargers"] .cards .card:nth-child(2) { animation-delay: 0.1s; }
+body[data-category="chargers"] .cards .card:nth-child(3) { animation-delay: 0.2s; }
+body[data-category="chargers"] .cards .card:nth-child(n + 4) { animation-delay: 0.3s; }
+
+body[data-category="chargers"] .cards:hover .card:not(:hover) {
+  opacity: 0.55;
+  transform: scale(0.98);
+}
+
+body[data-category="chargers"] .cards .card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(255, 214, 10, 0.85) !important;
+  box-shadow: 0 34px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 3px rgba(255, 214, 10, 0.16),
+    0 0 50px rgba(255, 214, 10, 0.3);
+}
+
+body[data-category="chargers"] .cards .card-img {
+  position: relative;
+  overflow: hidden;
+  height: 260px;
+  padding: 24px;
+  background: radial-gradient(circle at 50% 30%, #ffffff 0%, #ece8d8 90%) !important;
+  color: #6e6e73;
+}
+
+body[data-category="chargers"] .cards .card-img img {
+  transition: transform 0.6s ease;
+  filter: drop-shadow(0 18px 16px rgba(0, 0, 0, 0.28));
+}
+
+body[data-category="chargers"] .cards .card:hover .card-img img {
+  transform: scale(1.14) translateY(-6px);
+}
+
+body[data-category="chargers"] .cards .card-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.85) 50%, transparent 65%);
+  transform: translateX(-120%);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+
+body[data-category="chargers"] .cards .card:hover .card-img::after {
+  transform: translateX(120%);
+}
+
+body[data-category="chargers"] .cards .card-body {
+  padding: 22px 22px 8px;
+  background: transparent !important;
+}
+
+body[data-category="chargers"] .cards .card-name {
+  margin: 0 0 8px;
+  color: #ffffff !important;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+body[data-category="chargers"] .cards .card-variant {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #d8d8de !important;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+body[data-category="chargers"] .cards .card-price {
+  margin: 0;
+  color: #ffe066 !important;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  transition: text-shadow 0.3s ease;
+}
+
+body[data-category="chargers"] .cards .card:hover .card-price {
+  text-shadow: 0 0 18px rgba(255, 214, 10, 0.85);
+}
+
+body[data-category="chargers"] .cards .card-status {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 69, 58, 0.2) !important;
+  color: #ff8a80 !important;
+  font-size: 12px;
+}
+
+body[data-category="chargers"] .cards .card-actions {
+  gap: 10px;
+  padding: 16px 22px 24px;
+  background: transparent !important;
+}
+
+body[data-category="chargers"] .cards .card-actions .btn {
+  padding: 12px 10px;
+}
+
+body[data-category="chargers"] .cards .btn.buy::after {
+  content: " \2192";
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+body[data-category="chargers"] .cards .btn.buy:hover:not(:disabled)::after {
+  transform: translateX(5px);
+}
+
+body[data-category="chargers"] .cards .btn.buy:disabled {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #8e8e93 !important;
+  box-shadow: none;
+}
+
+body[data-category="chargers"] .cards .btn.buy:disabled::after {
+  content: "";
+}
+
+body[data-category="chargers"] .cards .btn.fav {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #f5f5f7 !important;
+}
+
+body[data-category="chargers"] .cards .btn.fav:hover:not(:disabled) {
+  background: rgba(255, 55, 95, 0.16) !important;
+  border-color: rgba(255, 55, 95, 0.7) !important;
+  color: #ff8aa0 !important;
+  transform: translateY(-3px);
+}
+
+body[data-category="chargers"] .cards .btn.fav.active {
+  background: rgba(255, 55, 95, 0.2) !important;
+  border-color: #ff375f !important;
+  color: #ff8aa0 !important;
+  box-shadow: 0 0 18px rgba(255, 55, 95, 0.3);
+  animation: ch-heart 0.45s ease;
+}
+
+body[data-category="chargers"] .empty {
+  padding: 70px 0;
+  color: #a1a1a6;
+  font-size: 18px;
+}
+
+body[data-category="chargers"] .footer {
+  position: relative;
+  margin-top: 40px;
+  padding: 56px 24px 26px;
+  background: #080704 !important;
+  border-top: 0 !important;
+  color: #8e8e93;
+}
+
+body[data-category="chargers"] .footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff, #ffd60a, #ff9f0a, transparent);
+}
+
+body[data-category="chargers"] .footer-inner {
+  gap: 48px;
+}
+
+body[data-category="chargers"] .footer-brand strong {
+  color: #fff !important;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-shadow: 0 0 24px rgba(255, 214, 10, 0.6);
+}
+
+body[data-category="chargers"] .footer-brand p {
+  color: #8e8e93;
+}
+
+body[data-category="chargers"] .footer-col h4 {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #f5f5f7 !important;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+body[data-category="chargers"] .footer-col h4::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  margin-top: 6px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ffd60a, transparent);
+}
+
+body[data-category="chargers"] .footer-col a {
+  position: relative;
+  width: fit-content;
+  color: #8e8e93 !important;
+  transition: color 0.2s ease, transform 0.25s ease;
+}
+
+body[data-category="chargers"] .footer-col a::before {
+  content: "\2192";
+  position: absolute;
+  left: -18px;
+  color: #ffd60a;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+body[data-category="chargers"] .footer-col a:hover {
+  color: #fff !important;
+  transform: translateX(18px);
+}
+
+body[data-category="chargers"] .footer-col a:hover::before {
+  opacity: 1;
+}
+
+body[data-category="chargers"] .footer-copy {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #6e6e73;
+}
+
+
+@keyframes ch-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ch-float-a {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+
+@keyframes ch-float-b {
+  0%, 100% { transform: translateY(0) rotate(8deg); filter: brightness(1); }
+  45%      { transform: translateY(-16px) rotate(6deg); filter: brightness(1.25); }
+  55%      { transform: translateY(-16px) rotate(6deg); filter: brightness(0.9); }
+}
+
+@keyframes ch-pulse {
+  0%, 100% {
+    box-shadow: inset 0 -12px 24px rgba(0, 0, 0, 0.12),
+      0 40px 80px rgba(0, 0, 0, 0.65), 0 0 90px rgba(255, 214, 10, 0.3);
+  }
+  50% {
+    box-shadow: inset 0 -12px 24px rgba(0, 0, 0, 0.12),
+      0 40px 80px rgba(0, 0, 0, 0.65), 0 0 150px rgba(255, 214, 10, 0.6);
+  }
+}
+
+@keyframes ch-heart {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 1099px) {
+  body[data-category="chargers"] .hero {
+    min-height: 0;
+    padding: 72px 20px 56px;
+  }
+
+  body[data-category="chargers"] .hero::before,
+  body[data-category="chargers"] .hero::after {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  body[data-category="chargers"] .hero .search {
+    width: 100%;
+  }
+
+  body[data-category="chargers"] .hero .search input[type="search"] {
+    flex: 1 1 auto;
+    width: auto;
+  }
+
+  body[data-category="chargers"] .cards .card-img {
+    height: 230px;
+  }
+
+  body[data-category="chargers"] .cards:hover .card:not(:hover) {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body[data-category="chargers"] *,
+  body[data-category="chargers"] *::before,
+  body[data-category="chargers"] *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Favourites · I Store</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/favourite.css">
+  <script src="../js/app.js" defer></script>
+</head>
+<body data-page="favourites">
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="dashboard.html">I Store</a>
+      <nav class="nav-links">
+        <a href="dashboard.html">Home</a>
+        <a href="iphone.html">iPhone</a>
+        <a href="macbook.html">MacBook</a>
+        <a href="tablet.html">Tablets</a>
+        <a href="earbuds.html">Earbuds</a>
+        <a href="charger.html">Chargers</a>
+        <a href="favourites.html" class="active">Favourites</a>
+      </nav>
+      <div class="nav-user">
+        <a href="profile.html" id="nav-name">Account</a>
+        <a href="../../includes/logout.php" class="logout">Log out</a>
+      </div>
+    </div>
+  </header>
+  <main class="favourite-page">
+    <div class="favourite-heading">
+      <p class="eyebrow">YOUR COLLECTION</p>
+      <h1>My Favourites ❤️</h1>
+      <p>All your saved products in one place.</p>
+    </div>
+    <div id="favourite-list" class="favourite-list">
+      <p class="empty">Loading favourites...</p>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>

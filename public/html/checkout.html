@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout · I Store</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <script src="../js/app.js" defer></script>
+  </head>
+  <body data-page="checkout">
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="dashboard.html">I Store</a>
+        <nav class="nav-links">
+          <a href="dashboard.html">Home</a>
+          <a href="iphone.html">iPhone</a>
+          <a href="macbook.html">MacBook</a>
+          <a href="tablet.html">Tablets</a>
+          <a href="earbuds.html">Earbuds</a>
+          <a href="charger.html">Chargers</a>
+          <a href="admin.html" class="admin-link" hidden>Admin</a>
+        </nav>
+        <div class="nav-user">
+          <a href="profile.html" id="nav-name">Account</a>
+          <a href="../../includes/logout.php" class="logout">Log out</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="checkout">
+      <h1>Checkout</h1>
+      <div id="messages"></div>
+      <section id="order-summary"></section>
+
+      <form id="checkout-form" hidden>
+        <h2>Delivery details</h2>
+
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required />
+
+        <label for="full_name">Full name</label>
+        <input type="text" id="full_name" name="full_name" maxlength="100" required />
+
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="03XX-XXXXXXX" required />
+
+        <label for="address">Full address</label>
+        <textarea id="address" name="address" rows="3" maxlength="255" required></textarea>
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" maxlength="80" required />
+
+        <label for="cnic">CNIC</label>
+        <input type="text" id="cnic" name="cnic" placeholder="12345-1234567-1" maxlength="15" required />
+
+        <h2>Payment method</h2>
+        <label><input type="radio" name="payment_method" value="jazzcash" required /> JazzCash</label>
+        <label><input type="radio" name="payment_method" value="easypaisa" /> Easypaisa</label>
+        <label><input type="radio" name="payment_method" value="bank_transfer" /> Bank Transfer</label>
+
+        <div id="payment-details"></div>
+
+        <label for="transaction_id">Transaction ID</label>
+        <input type="text" id="transaction_id" name="transaction_id" maxlength="60" placeholder="ID from your payment receipt" required />
+
+        <button type="submit" class="btn" id="place-btn">Place order</button>
+      </form>
+
+      <section id="order-success" hidden></section>
+    </main>
+
+    <div id="site-footer"></div>
+  </body>
+</html>

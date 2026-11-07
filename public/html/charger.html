@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chargers · I Store</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/charger.css" />
+    <script src="../js/app.js" defer></script>
+  </head>
+  <body class="loading" data-page="product" data-category="chargers">
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="dashboard.html">I Store</a>
+        <nav class="nav-links">
+          <a href="dashboard.html">Home</a>
+          <a href="iphone.html">iPhone</a>
+          <a href="macbook.html">MacBook</a>
+          <a href="tablet.html">Tablets</a>
+          <a href="earbuds.html">Earbuds</a>
+          <a href="charger.html" class="active">Chargers</a>
+          <a href="admin.html" class="admin-link" hidden>Admin</a>
+        </nav>
+        <div class="nav-user">
+          <a href="profile.html" id="nav-name">Account</a>
+          <a href="../../includes/logout.php" class="logout">Log out</a>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <h1>Chargers</h1>
+      <p>Power adapters, MagSafe chargers and cables to keep you going.</p>
+      <div class="hero-actions">
+        <button type="button" class="btn" id="show-btn">Show</button>
+        <form class="search" id="search-form">
+          <input
+            type="search"
+            name="q"
+            id="search-input"
+            placeholder="Search Chargers"
+          />
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </div>
+    </section>
+    <div id="products" class="product-grid" hidden></div>
+    <div id="site-footer"></div>
+  </body>
+</html>
