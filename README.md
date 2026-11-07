@@ -5,7 +5,11 @@ I Store is a web-based online store for Apple products (iPhone, MacBook, Tablets
 The front end is plain HTML, CSS and JavaScript. The back end is PHP with a MySQL database, and the pages talk to small PHP endpoints using `fetch()` and JSON.
 
 ---
+## Project Demo
 
+Watch a walkthrough of the project (about 13 minutes): [I Store - Project Demo (YouTube)](https://youtu.be/iyPAyAv8u7A)
+
+---
 ## Features
 
 ### Customer
